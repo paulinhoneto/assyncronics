@@ -7,7 +7,7 @@
  *  Data        : 15/07/2015    
  */
 
-'use strict';
+"use strict";
 
 (function() {
 
@@ -61,17 +61,26 @@
 
 	var modernizr = modernizr || {};
 	modernizr = {
-		load:function(){
+		load: function(){
 			getScript("http://modernizr.com/downloads/modernizr-latest.js")
+		}
+	};
+
+	var foundation = foundation || {};
+	foundation = {
+		load: function(){
+			modernizr.load(),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"),
+			getStyle("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css")
 		}
 	};
 
 	try{
 		// Aqui-local do carregamento das dependências getScript para javascript getStyle para css
-		materialize.load()
+		foundation.load()
 	}catch(e){
 		alert('error: '+ e.message);
 	}
-	
+
 })();	
 

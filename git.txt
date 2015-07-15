@@ -5,20 +5,17 @@ git init
 git config --global user.name "SeuNomeAqui"
 git config --global user.email dominio@email.com
 
+git remote add origin https://github.com/paulinhoneto/{repositorio}.git
+
+git push origin master
+
 git add . 
 
 git status 
+
 git log
 
 git commit -m "descrição do comite"
 
-git push origin master
-
 git revert codigo
 
-
-consultar licença do uso do map google
-
-https://www.google.com/intx/pt-BR/work/mapsearth/products/mapsapi.html
-http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/
-https://developers.google.com/maps/documentation/javascript/examples/map-simple-async
