@@ -108,8 +108,16 @@
 	// angular js load acess in try angularjs.load()
 	var angularjs = angularjs || {};
 	angularjs = {
-		load: function(){
+		load: function () {
 			getScript("https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js")
+		}
+	};
+    
+    // underscore load acess in try underscore.load()
+	var underscore = underscore || {};
+	underscore = {
+		load: function () {
+			getScript("http://underscorejs.org/underscore-min.js")
 		}
 	};
 
