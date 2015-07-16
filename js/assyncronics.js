@@ -73,8 +73,7 @@
 
 	var ratchet = ratchet || {};
 	ratchet = {
-
-		load: function (tipo) {
+		load: function () {
 			getScript("https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/js/ratchet.min.js"),
 			//getStyle("https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet-theme-android.min.css"),
 			//getStyle("https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet-theme-ios.min.css"),
@@ -89,7 +88,6 @@
 
 	try{
 		// Aqui-local do carregamento das dependências getScript para javascript getStyle para css
-		
 		ratchet.load()
 
 	}catch(e){
