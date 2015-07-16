@@ -87,7 +87,7 @@
 		}   
 	};
 
-	// jquerymobile load acess in try jquerymobile.load()
+	// jquery mobile load acess in try jquerymobile.load()
 	var jquerymobile = jquerymobile || {};
 	jquerymobile = {
 		load: function () {
@@ -96,12 +96,20 @@
 		}
 	};
 
-	// jqueryui load access in try jqueryui.load()
+	// jquery ui load access in try jqueryui.load()
 	var jqueryui = jqueryui || {};	
 	jqueryui = {
 		load: function () {
 			getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"),
 			getStyle("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css")
+		}
+	};
+
+	// angular js load acess in try angularjs.load()
+	var angularjs = angularjs || {};
+	angularjs = {
+		load: function(){
+			getScript("https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js")
 		}
 	};
 
