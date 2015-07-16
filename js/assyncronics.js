@@ -139,6 +139,7 @@
 	// código de inclusão do load ficará a cargo do desenvolvedor de forma modular.
 	try{
 		// Aqui-local do carregamento das dependências getScript para javascript getStyle para css
+		underscore.load()
 		ratchet.load()
 
 	}catch(e){
