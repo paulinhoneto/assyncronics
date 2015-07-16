@@ -85,7 +85,23 @@
 		}   
 	};
 
+	var jquerymobile = jquerymobile || {};
+	jquerymobile = {
+		load: function () {
+			getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"),
+			getStyle("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+		}
+	};
 
+	var jqueryui = jqueryui || {};
+	jqueryui = {
+		load: function () {
+			getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"),
+			getStyle("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css")
+		}
+	};
+
+	// código de inclusão do load ficará a cargo do desenvolvedor de forma modular.
 	try{
 		// Aqui-local do carregamento das dependências getScript para javascript getStyle para css
 		ratchet.load()
