@@ -121,6 +121,13 @@
 		}
 	};
 
+	var animatecss = animatecss || {};
+	var animatecss = {
+		load: function () {
+			getStyle("https://github.com/daneden/animate.css/blob/master/animate.min.css")
+		}
+	}; 
+
 	// código de inclusão do load ficará a cargo do desenvolvedor de forma modular.
 	try{
 		// Aqui-local do carregamento das dependências getScript para javascript getStyle para css
