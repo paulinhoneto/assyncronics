@@ -63,6 +63,7 @@
 		}
 	};
 
+	// foundation load acess in try foundation.load()
 	var foundation = foundation || {};
 	foundation = {
 		load: function () {
@@ -71,6 +72,7 @@
 		}
 	};
 
+	// ratchet load acess in try ratchet.load()
 	var ratchet = ratchet || {};
 	ratchet = {
 		load: function () {
@@ -85,6 +87,7 @@
 		}   
 	};
 
+	// jquerymobile load acess in try jquerymobile.load()
 	var jquerymobile = jquerymobile || {};
 	jquerymobile = {
 		load: function () {
@@ -93,11 +96,20 @@
 		}
 	};
 
-	var jqueryui = jqueryui || {};
+	// jqueryui load access in try jqueryui.load()
+	var jqueryui = jqueryui || {};	
 	jqueryui = {
 		load: function () {
 			getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"),
 			getStyle("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css")
+		}
+	};
+
+    // mootools load acess in try mootools.load() 
+	var mootools = mootools || {};
+	mootools = {
+		load: function () {
+			getScript("https://ajax.googleapis.com/ajax/libs/mootools/1.5.1/mootools-yui-compressed.js")
 		}
 	};
 
