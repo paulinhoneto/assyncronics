@@ -109,7 +109,17 @@
 	var angularjs = angularjs || {};
 	angularjs = {
 		load: function () {
-			getScript("https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js")
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js.map"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-sanitize.min.js"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-sanitize.min.js.map"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-resource.min.js"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-resource.min.js.map"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-animate.min.js"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-animate.min.js.map"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.min.js"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.min.js.map")
+
 		}
 	};
     
@@ -129,19 +139,29 @@
 		}
 	};
 
+	// animatecss load acess in try animate.load()
 	var animatecss = animatecss || {};
-	var animatecss = {
+	animatecss = {
 		load: function () {
 			getStyle("https://github.com/daneden/animate.css/blob/master/animate.min.css")
 		}
 	}; 
 
+	// ionic load acess in try ionic.load()
+	var ionic = ionic || {};
+	ionic = {
+		load: function (){
+			getStyle("http://code.ionicframework.com/1.0.1/css/ionic.css"),
+			getScript("http://code.ionicframework.com/1.0.1/js/ionic.bundle.js")	
+		}
+	};
+
 	// código de inclusão do load ficará a cargo do desenvolvedor de forma modular.
 	try{
 		// Aqui-local do carregamento das dependências getScript para javascript getStyle para css
 		jquery.load()
-		angularjs.load()
-		ratchet.load()
+		ionic.load()
+		
 
 	}catch(e){
 		alert('error: '+ e.message);
