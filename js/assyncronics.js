@@ -147,22 +147,23 @@
 		}
 	}; 
 
-	// ionic load acess in try ionic.load()
-	var ionic = ionic || {};
-	ionic = {
-		load: function (){
-			getStyle("http://code.ionicframework.com/1.0.1/css/ionic.css"),
-			getScript("http://code.ionicframework.com/1.0.1/js/ionic.bundle.js")	
+	// winjs load acess in try winjs.load()
+	var winjs = winjs || {};
+	winjs = {
+		load: function () {
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/winjs/4.1.0/js/base.min.js"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/winjs/4.1.0/js/ui.min.js"),
+			getScript("https://cdnjs.cloudflare.com/ajax/libs/winjs/4.1.0/js/WinJS.intellisense.js"),
+			getStyle("https://cdnjs.cloudflare.com/ajax/libs/winjs/4.1.0/css/ui-dark.min.css"), // or ui.light
+			getStyle("https://cdnjs.cloudflare.com/ajax/libs/winjs/4.1.0/fonts/Symbols.ttf")
 		}
 	};
-
+ 
 	// código de inclusão do load ficará a cargo do desenvolvedor de forma modular.
 	try{
 		// Aqui-local do carregamento das dependências getScript para javascript getStyle para css
 		jquery.load()
-		ionic.load()
 		
-
 	}catch(e){
 		alert('error: '+ e.message);
 	}
