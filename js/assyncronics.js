@@ -1,5 +1,5 @@
 /*
- *  Author      : Antônio Paulo Neto
+ *  Author      : Paulinho Neto
  *  File        : assyncronics,js
  *  Description : Faz o load de maneira assíncrona, de uma enorme gama de frameworks a serem e 
  *	arregados na Memória, de acordo com a necessidade do desenvolvedor.	 			  .
